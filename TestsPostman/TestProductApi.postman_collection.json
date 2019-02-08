@@ -1,0 +1,82 @@
+{
+	"info": {
+		"name": "TestProductApi",
+		"_postman_id": "f401de84-0289-363a-cbc9-26875d13a819",
+		"description": "Requests to test the api of Products management microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 5,\n\t\"nom\" : \"Machine a laver\",\n\t\"prix\" : 0,\n\t\"prix_achat\": 2000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/Produits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderedProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9090/Produits/parnom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"Produits",
+						"parnom"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Products_Profits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:9090/AdminProduits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"AdminProduits"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
